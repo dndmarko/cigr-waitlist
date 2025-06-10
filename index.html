@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>CIGR Waitlist</title>
+</head>
+<body>
+  <h1>Join the CIGR Waitlist</h1>
+  <form id="waitlist-form">
+    <input type="email" name="email" placeholder="Enter your email" required />
+    <button type="submit">Join Waitlist</button>
+  </form>
+
+  <script>
+    const form = document.getElementById('waitlist-form');
+
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const email = form.email.value;
+
+      await fetch('https://YOUR_PROJECT.supabase.co/rest/v1/waitlist', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'apikey': 'YOUR_ANON_KEY',
+          'Authorization': 'Bearer YOUR_ANON_KEY'
+        },
+        body: JSON.stringify({ email })
+      });
+
+      alert('Email submitted!');
+      form.reset();
+    });
+  </script>
+</body>
+</html>
