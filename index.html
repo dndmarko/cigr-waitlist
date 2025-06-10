@@ -19,12 +19,12 @@
       e.preventDefault();
       const email = form.email.value;
 
-      await fetch('https://YOUR_PROJECT.supabase.co/rest/v1/waitlist', {
+      await fetch('https://tqjfdttoodpifkvyidia.supabase.co/rest/v1/waitlist', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
-          'apikey': 'YOUR_ANON_KEY',
-          'Authorization': 'Bearer YOUR_ANON_KEY'
+          'apikey': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InRxamZkdHRvb2RwaWZrdnlpZGlhIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDk1MTcyMjksImV4cCI6MjA2NTA5MzIyOX0.X5V7xTHw4HT_1t4lMthPZS0jYMp0YBXy2QvImWU_Q9w',
+          'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InRxamZkdHRvb2RwaWZrdnlpZGlhIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDk1MTcyMjksImV4cCI6MjA2NTA5MzIyOX0.X5V7xTHw4HT_1t4lMthPZS0jYMp0YBXy2QvImWU_Q9w'
         },
         body: JSON.stringify({ email })
       });
